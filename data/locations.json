@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "name": "Paris, France",
+    "description": "Experience the City of Light with its iconic landmarks, world-class cuisine, and romantic atmosphere.",
+    "image": "/assets/ef75d0de8f6b1e39b5da05d71b35af4586147d5a.jpg",
+    "price": "$899",
+    "duration": "5 days",
+    "category": "City Break"
+  },
+  {
+    "id": 2,
+    "name": "Rio de Janeiro, Brazil",
+    "description": "Discover the vibrant culture, stunning beaches, and breathtaking views of this iconic Brazilian city.",
+    "image": "/assets/heroimg.jpg",
+    "price": "$1,299",
+    "duration": "7 days",
+    "category": "Beach & Culture"
+  },
+  {
+    "id": 3,
+    "name": "Ottawa, Canada",
+    "description": "Explore the capital city with its historic parliament buildings and beautiful river views.",
+    "image": "/assets/89db6b323a21742d0980117adfc2359e5747d732.jpg",
+    "price": "$749",
+    "duration": "4 days",
+    "category": "City Break"
+  },
+  {
+    "id": 4,
+    "name": "Tropical Paradise",
+    "description": "Luxury waterfront properties with palm trees and crystal-clear waters await you.",
+    "image": "/assets/70d7614404b34aba5cb183db978435da48b62761.jpg",
+    "price": "$1,499",
+    "duration": "6 days",
+    "category": "Luxury"
+  },
+  {
+    "id": 5,
+    "name": "Las Vegas, USA",
+    "description": "The entertainment capital of the world with world-class shows, dining, and nightlife.",
+    "image": "/assets/812a182d62a3be6d3f2c07829563151a9b7a2df0.jpg",
+    "price": "$699",
+    "duration": "4 days",
+    "category": "Entertainment"
+  },
+  {
+    "id": 6,
+    "name": "Orlando, Florida",
+    "description": "Theme parks, beautiful lakes, and family-friendly attractions in the Sunshine State.",
+    "image": "/assets/faa4704a49031769686647f997fadc226b10669a.jpg",
+    "price": "$849",
+    "duration": "5 days",
+    "category": "Family"
+  },
+  {
+    "id": 7,
+    "name": "Toronto, Canada",
+    "description": "Modern skyline with the iconic CN Tower, diverse neighborhoods, and cultural attractions.",
+    "image": "/assets/924021389d981fa190b25a270613919bf5c65495.jpg",
+    "price": "$799",
+    "duration": "5 days",
+    "category": "City Break"
+  },
+  {
+    "id": 8,
+    "name": "Fountain City",
+    "description": "Beautiful cityscape with stunning fountains and modern architecture.",
+    "image": "/assets/6e98aeb31beefe487b716e92c4d14ac4e17bf770.jpg",
+    "price": "$649",
+    "duration": "4 days",
+    "category": "City Break"
+  }
+]
+
