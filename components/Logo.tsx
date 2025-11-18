@@ -1,12 +1,15 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
 interface LogoProps {
-  className?: string
-  variant?: 'light' | 'dark'
+  className?: string;
+  variant?: "light" | "dark";
 }
 
-export default function Logo({ className = '', variant = 'light' }: LogoProps) {
+export default function Logo({ className = "", variant = "light" }: LogoProps) {
+  const logoSrc =
+    variant === "dark" ? "/assets/vlogogold.svg" : "/assets/velvetlogo.svg";
+
   return (
     <Link
       href="/"
@@ -15,7 +18,7 @@ export default function Logo({ className = '', variant = 'light' }: LogoProps) {
       aria-label="Velvet Traveler home"
     >
       <Image
-        src="/assets/velvetlogo.svg"
+        src={logoSrc}
         alt="Velvet Traveler logo"
         width={122}
         height={75}
@@ -23,6 +26,5 @@ export default function Logo({ className = '', variant = 'light' }: LogoProps) {
         className="h-10 w-auto sm:h-12 md:h-14"
       />
     </Link>
-  )
+  );
 }
-
