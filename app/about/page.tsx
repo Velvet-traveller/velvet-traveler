@@ -1,9 +1,9 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#f9f3eb]">
       <Header />
       <section className="pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,6 +19,5 @@ export default function AboutPage() {
       </section>
       <Footer />
     </main>
-  )
+  );
 }
-
