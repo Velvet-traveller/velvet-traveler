@@ -100,7 +100,7 @@ export default function TopDestinations() {
             href="/locations"
             className="inline-block bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-sm sm:text-base md:text-lg font-semibold transition-colors duration-300"
           >
-            Explore more →
+            Explore Available Bookings →
           </Link>
         </div>
       </div>
