@@ -98,7 +98,7 @@ export default function LocationHeader() {
         <div className="hidden md:grid md:grid-cols-2 gap-6">
           <div className="relative w-full h-80 lg:h-76 overflow-hidden rounded-3xl group">
             <Image
-              src="/assets/locationsImg/locationheader2.svg"
+              src="/assets/locations-hotelImg/locationheader2.svg"
               alt="Paris Eiffel Tower"
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -107,7 +107,7 @@ export default function LocationHeader() {
           </div>
           <div className="relative w-full h-80 lg:h-76 overflow-hidden rounded-3xl group">
             <Image
-              src="/assets/locationsImg/locationheader1.svg"
+              src="/assets/locations-hotelImg/locationheader1.svg"
               alt="Disney Castle"
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-500"

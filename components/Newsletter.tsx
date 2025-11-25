@@ -20,7 +20,7 @@ export default function Newsletter() {
           {/* Left Side - Image */}
           <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden rounded-lg order-2 md:order-1 group">
             <Image
-              src="/assets/locationsImg/subscrib.svg"
+              src="/assets/locations-hotelImg/subscrib.svg"
               alt="City skyline"
               fill
               className="object-cover rounded-lg group-hover:scale-110 transition-transform duration-500"

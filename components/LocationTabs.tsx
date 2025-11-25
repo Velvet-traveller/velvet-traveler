@@ -9,37 +9,37 @@ const hotelsData = [
     city: "PARIS",
     region: "Ile-de-france, France",
     price: "$300.40",
-    image: "/assets/locationsImg/paris.svg",
+    image: "/assets/locations-hotelImg/paris.svg",
   },
   {
     city: "ORLANDO",
     region: "Florida, United States of America",
     price: "$300.40",
-    image: "/assets/locationsImg/locationheader2.svg",
+    image: "/assets/locations-hotelImg/orlando.svg",
   },
   {
     city: "CHICAGO",
     region: "Illinois, United States of America",
     price: "$300.40",
-    image: "/assets/locationsImg/chicago.svg",
+    image: "/assets/locations-hotelImg/chicago.svg",
   },
   {
     city: "LOS ANGELES",
     region: "California, United States of America",
     price: "$300.40",
-    image: "/assets/locationsImg/losangeles.svg",
+    image: "/assets/locations-hotelImg/losangeles.svg",
   },
   {
     city: "MADRID",
     region: "Spain",
     price: "$300.40",
-    image: "/assets/locationsImg/madrid.svg",
+    image: "/assets/locations-hotelImg/madrid.svg",
   },
   {
     city: "ZURICH",
     region: "Switzerland",
     price: "$300.40",
-    image: "/assets/locationsImg/zurich.svg",
+    image: "/assets/locations-hotelImg/zurich.svg",
   },
 ];
 
