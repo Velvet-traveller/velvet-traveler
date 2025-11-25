@@ -64,12 +64,15 @@ export default function LocationHeader() {
             }}
           >
             {images.map((image, index) => (
-              <div key={index} className="relative w-full h-48 flex-shrink-0">
+              <div
+                key={index}
+                className="relative w-full h-48 flex-shrink-0 overflow-hidden rounded-3xl group"
+              >
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-cover rounded-3xl"
+                  className="object-cover rounded-3xl group-hover:scale-110 transition-transform duration-500"
                   sizes="100vw"
                 />
               </div>
@@ -93,21 +96,21 @@ export default function LocationHeader() {
 
         {/* Desktop Grid */}
         <div className="hidden md:grid md:grid-cols-2 gap-6">
-          <div className="relative w-full h-80 lg:h-96 overflow-hidden rounded-3xl">
+          <div className="relative w-full h-80 lg:h-76 overflow-hidden rounded-3xl group">
             <Image
               src="/assets/locationsImg/locationheader2.svg"
               alt="Paris Eiffel Tower"
               fill
-              className="object-cover"
+              className="object-cover group-hover:scale-110 transition-transform duration-500"
               sizes="50vw"
             />
           </div>
-          <div className="relative w-full h-80 lg:h-96 overflow-hidden rounded-3xl">
+          <div className="relative w-full h-80 lg:h-76 overflow-hidden rounded-3xl group">
             <Image
               src="/assets/locationsImg/locationheader1.svg"
               alt="Disney Castle"
               fill
-              className="object-cover"
+              className="object-cover group-hover:scale-110 transition-transform duration-500"
               sizes="50vw"
             />
           </div>

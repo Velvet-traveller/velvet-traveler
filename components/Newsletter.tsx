@@ -18,12 +18,12 @@ export default function Newsletter() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Side - Image */}
-          <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden order-2 md:order-1">
+          <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden rounded-lg order-2 md:order-1 group">
             <Image
               src="/assets/locationsImg/subscrib.svg"
               alt="City skyline"
               fill
-              className="object-cover"
+              className="object-cover rounded-lg group-hover:scale-110 transition-transform duration-500"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>

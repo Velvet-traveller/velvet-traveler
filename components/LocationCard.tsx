@@ -17,12 +17,12 @@ export default function LocationCard({
     <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row">
       {/* Image on Left */}
       <div className="relative w-full md:w-1/2 h-48 md:h-auto rounded-t-lg md:rounded-t-none md:rounded-l-lg flex-shrink-0 p-4">
-        <div className="relative w-full h-full overflow-hidden rounded-lg">
+        <div className="relative w-full h-full overflow-hidden rounded-lg group">
           <Image
             src={image}
             alt={city}
             fill
-            className="object-cover"
+            className="object-cover group-hover:scale-110 transition-transform duration-500"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
