@@ -1,8 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import LocationHeader from "@/components/LocationHeader";
+import LocationHeader from "@/components/locations/LocationHeader";
 import ExclusiveOffersBanner from "@/components/ExclusiveOffersBanner";
-import LocationTabs from "@/components/LocationTabs";
+import LocationTabs from "@/components/locations/LocationTabs";
 import Newsletter from "@/components/Newsletter";
 
 export default function LocationsPage() {
