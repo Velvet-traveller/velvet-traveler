@@ -34,7 +34,7 @@ export default function PopularPlaces() {
             return (
               <div
                 key={location.id}
-                className={`relative w-full overflow-hidden group cursor-pointer shadow-[0_35px_70px_rgba(15,23,42,0.25)] ${heightClasses[index]}`}
+                className={`relative w-full overflow-hidden group cursor-default shadow-[0_35px_70px_rgba(15,23,42,0.25)] ${heightClasses[index]}`}
               >
                 <Image
                   src={location.image}

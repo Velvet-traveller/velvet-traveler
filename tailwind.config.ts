@@ -19,6 +19,15 @@ const config: Config = {
         serif: ['Georgia', 'serif'],
         sans: ['Arial', 'Helvetica', 'sans-serif'],
       },
+      keyframes: {
+        breathe: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.05)' },
+        },
+      },
+      animation: {
+        breathe: 'breathe 3s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

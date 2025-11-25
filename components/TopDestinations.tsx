@@ -32,7 +32,7 @@ export default function TopDestinations() {
           <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 h-full">
             {/* Top-left: horizontal city skyline at dusk */}
             {topDestinations[0] && (
-              <div className="relative h-64 sm:h-72 md:flex-1 rounded-2xl overflow-hidden group cursor-pointer">
+              <div className="relative h-64 sm:h-72 md:flex-1 rounded-2xl overflow-hidden group cursor-default">
                 <Image
                   src={topDestinations[0].image}
                   alt={topDestinations[0].name}
@@ -53,7 +53,7 @@ export default function TopDestinations() {
 
             {/* Bottom-left: horizontal waterfront with fountain */}
             {topDestinations[2] && (
-              <div className="relative h-64 sm:h-72 md:flex-1 rounded-2xl overflow-hidden group cursor-pointer">
+              <div className="relative h-64 sm:h-72 md:flex-1 rounded-2xl overflow-hidden group cursor-default">
                 <Image
                   src={topDestinations[2].image}
                   alt={topDestinations[2].name}
@@ -75,7 +75,7 @@ export default function TopDestinations() {
 
           {/* Right: vertical aerial city at dusk/night */}
           {topDestinations[1] && (
-            <div className="relative h-64 sm:h-80 md:h-full md:min-h-[520px] lg:min-h-[620px] rounded-2xl overflow-hidden group cursor-pointer">
+            <div className="relative h-64 sm:h-80 md:h-full md:min-h-[520px] lg:min-h-[620px] rounded-2xl overflow-hidden group cursor-default">
               <Image
                 src={topDestinations[1].image}
                 alt={topDestinations[1].name}
@@ -98,7 +98,7 @@ export default function TopDestinations() {
         <div className="flex justify-center">
           <Link
             href="/locations"
-            className="inline-block bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-sm sm:text-base md:text-lg font-semibold transition-colors duration-300"
+            className="inline-block bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-sm sm:text-base md:text-lg font-semibold transition-colors duration-300 animate-breathe"
           >
             Explore Available Bookings →
           </Link>
