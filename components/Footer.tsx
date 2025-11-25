@@ -3,10 +3,30 @@ import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="bg-velvet-dark text-white py-8 sm:py-12">
+    <footer className="bg-velvet-dark text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="border-t border-gray-700 pt-6 sm:pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-8">
+        {/* Top Section - Logo, Name, Tagline, Button */}
+        <div className="py-12 md:py-16 text-center">
+          <div className="mb-6 md:mb-8 flex justify-center">
+            <Logo variant="dark" />
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4 md:mb-6">
+            The Velvet Traveler
+          </h2>
+          <p className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto">
+            Luxury Travel. Smart Choices. Beautiful Experiences.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block bg-[#8B6914] hover:bg-[#A67C1A] text-white px-6 py-3 md:px-8 md:py-2 rounded-2xl text-base md:text-lg font-semibold transition-colors duration-300"
+          >
+            Contact Us
+          </Link>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-700 py-6 md:py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
             {/* Email */}
             <div className="flex items-center text-velvet-gold order-2 md:order-1">
               <img
@@ -22,37 +42,20 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* Legal Links */}
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-velvet-gold text-sm sm:text-base order-3 md:order-2">
-              <Link
-                href="/terms"
-                className="hover:text-white transition whitespace-nowrap"
-              >
-                Terms
-              </Link>
-              <Link
-                href="/privacy"
-                className="hover:text-white transition whitespace-nowrap"
-              >
-                Privacy
-              </Link>
-              <Link
-                href="/cookies"
-                className="hover:text-white transition whitespace-nowrap"
-              >
-                Cookies
-              </Link>
+            {/* Copyright */}
+            <div className="text-sm sm:text-base text-gray-400 order-3 md:order-2 text-center">
+              © 2025 The Velvet Traveler. All Rights Reserved.
             </div>
 
             {/* Social Media Icons */}
-            <div className="flex space-x-3 sm:space-x-4 order-4 md:order-3">
+            <div className="flex space-x-3 sm:space-x-4 order-1 md:order-3">
               <a
                 href="#"
-                className="text-velvet-gold hover:text-white transition w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center"
+                className="bg-[#8B6914] hover:bg-[#A67C1A] transition w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center"
                 aria-label="Instagram"
               >
                 <svg
-                  className="w-5 h-5 sm:w-6 sm:h-6"
+                  className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -61,11 +64,11 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="text-velvet-gold hover:text-white transition w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center"
+                className="bg-[#8B6914] hover:bg-[#A67C1A] transition w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center"
                 aria-label="TikTok"
               >
                 <svg
-                  className="w-5 h-5 sm:w-6 sm:h-6"
+                  className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
