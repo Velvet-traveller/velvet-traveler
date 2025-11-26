@@ -30,9 +30,9 @@ export default function Hero() {
           </p>
           <Link
             href="/locations#weeks"
-            className="inline-block bg-[#8B6914] hover:bg-[#A67C1A] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg font-semibold transition-colors duration-300"
+            className="inline-block bg-[#8B6914] hover:bg-[#A67C1A] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg font-semibold transition-colors duration-300 animate-breathe"
           >
-            Plan my trip
+            Plan my trip →
           </Link>
         </div>
       </div>
