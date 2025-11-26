@@ -1,0 +1,62 @@
+import { create } from "zustand";
+
+export interface BookingData {
+  // Contact Information
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  
+  // Trip Details
+  tripType: "hotel" | "week" | "seascape";
+  destination: string;
+  region?: string;
+  price?: string;
+  description?: string;
+  
+  // Additional Details
+  travelDate?: string;
+  numberOfGuests?: number;
+  specialRequests?: string;
+  
+  // Timestamp
+  submittedAt?: Date;
+}
+
+interface BookingStore {
+  bookings: BookingData[];
+  addBooking: (booking: BookingData) => Promise<void>;
+  isLoading: boolean;
+  error: string | null;
+}
+
+export const useBookingStore = create<BookingStore>((set) => ({
+  bookings: [],
+  isLoading: false,
+  error: null,
+  
+  addBooking: async (booking: BookingData) => {
+    set({ isLoading: true, error: null });
+    try {
+      // Simulate API call - you'll replace this with Firebase later
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      
+      const newBooking = {
+        ...booking,
+        submittedAt: new Date(),
+      };
+      
+      set((state) => ({
+        bookings: [...state.bookings, newBooking],
+        isLoading: false,
+      }));
+    } catch (error) {
+      set({
+        error: error instanceof Error ? error.message : "Failed to submit booking",
+        isLoading: false,
+      });
+      throw error;
+    }
+  },
+}));
+
