@@ -37,27 +37,19 @@ export default function Newsletter() {
               Stay one step ahead. Find the best value travel with the latest
               deals and update.
             </p>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder=""
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B6914] focus:border-transparent bg-white"
-                  required
-                />
-              </div>
+            <form onSubmit={handleSubmit} className="flex gap-3">
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Email Address"
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B6914] focus:border-transparent bg-white"
+                required
+              />
               <button
                 type="submit"
-                className="w-full bg-[#8B6914] hover:bg-[#A67C1A] text-white px-6 py-3 rounded-lg text-base font-semibold transition-colors duration-300"
+                className="bg-[#8B6914] hover:bg-[#A67C1A] text-white px-6 py-3 rounded-lg text-sm font-semibold transition-colors duration-300 whitespace-nowrap"
               >
                 Subscribe
               </button>

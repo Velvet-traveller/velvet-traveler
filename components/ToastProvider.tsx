@@ -3,7 +3,11 @@
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function ToastProvider({ children }: { children: React.ReactNode }) {
+export default function ToastProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
       {children}
@@ -27,11 +31,7 @@ export default function ToastProvider({ children }: { children: React.ReactNode 
           borderRadius: "8px",
           boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
         }}
-        progressStyle={{
-          background: "#8B6914",
-        }}
       />
     </>
   );
 }
-
