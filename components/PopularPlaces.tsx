@@ -10,7 +10,7 @@ export default function PopularPlaces() {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-24 bg-[#f9f3eb]">
+    <section className="pt-4 md:pt-4 lg:pt-4 pb-12 md:pb-16 lg:pb-24 bg-[#f9f3eb]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="text-center mb-10 md:mb-14 lg:mb-16 max-w-3xl mx-auto">
           <div className="text-velvet-gold text-xs sm:text-sm md:text-base uppercase tracking-wider mb-2 font-sans">

@@ -45,9 +45,7 @@ export default function Footer() {
             {/* Social Media Icons - Center */}
             <div className="flex space-x-3 sm:space-x-4 order-1 md:order-2">
               <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
                 className="text-velvet-gold hover:text-white transition w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
                 aria-label="Instagram"
               >
@@ -60,9 +58,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://tiktok.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
                 className="text-velvet-gold hover:text-white transition w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
                 aria-label="TikTok"
               >
