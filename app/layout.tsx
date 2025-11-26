@@ -4,10 +4,8 @@ import ToastProvider from "@/components/ToastProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://velvettraveler.com"), // Update with your actual domain
-  title: {
-    default: "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
-    template: "%s | The Velvet Traveler",
-  },
+  title:
+    "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
   description:
     "Luxury travel that doesn't break the bank. The Velvet Traveler curates premium trips, exclusive hotel deals, and unforgettable cruise packages. Experience luxury travel with smart choices and beautiful experiences.",
   keywords: [
@@ -31,10 +29,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: [
-      { url: "/assets/vlogogold.svg", type: "image/svg+xml" },
-      { url: "/assets/vlogogold.svg", sizes: "any", type: "image/svg+xml" },
-    ],
+    icon: "/assets/vlogogold.svg",
     apple: "/assets/vlogogold.svg",
     shortcut: "/assets/vlogogold.svg",
   },
@@ -44,24 +39,35 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://velvettraveler.com", // Update with your actual domain
     siteName: "The Velvet Traveler",
-    title: "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
+    title:
+      "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
     description:
       "Luxury travel that doesn't break the bank. The Velvet Traveler curates premium trips, exclusive hotel deals, and unforgettable cruise packages.",
     images: [
       {
-        url: "/assets/heroimg.png",
+        url: "https://velvettraveler.com/assets/heroimg.png", // Use absolute URL for social sharing
         width: 1200,
         height: 630,
         alt: "The Velvet Traveler - Luxury Travel Experiences",
+      },
+      {
+        url: "https://velvettraveler.com/assets/vlogogold.svg", // Logo for social sharing
+        width: 512,
+        height: 512,
+        alt: "The Velvet Traveler Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
+    title:
+      "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
     description:
       "Luxury travel that doesn't break the bank. Premium trips, exclusive deals, and unforgettable experiences.",
-    images: ["/assets/heroimg.png"],
+    images: [
+      "https://velvettraveler.com/assets/heroimg.png",
+      "https://velvettraveler.com/assets/vlogogold.svg",
+    ],
     creator: "@velvettraveler", // Update with your Twitter handle if available
   },
   robots: {
