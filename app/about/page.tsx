@@ -3,6 +3,24 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import ScrollToTop from "@/components/ScrollToTop";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn about The Velvet Traveler - your trusted partner in creating unforgettable travel experiences without breaking the bank. Discover our mission, values, and commitment to luxury travel with smart choices.",
+  openGraph: {
+    title: "About The Velvet Traveler",
+    description:
+      "Learn about The Velvet Traveler - your trusted partner in creating unforgettable travel experiences without breaking the bank.",
+    images: ["/assets/heroimg.png"],
+  },
+  twitter: {
+    title: "About The Velvet Traveler",
+    description:
+      "Learn about The Velvet Traveler - your trusted partner in creating unforgettable travel experiences without breaking the bank.",
+  },
+};
 
 export default function AboutPage() {
   return (

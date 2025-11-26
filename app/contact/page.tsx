@@ -3,6 +3,24 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import ScrollToTop from "@/components/ScrollToTop";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with The Velvet Traveler. Contact our travel experts for personalized trip planning, exclusive deals, and assistance with your bookings. Email us at booking@velvettraveler.com",
+  openGraph: {
+    title: "Contact The Velvet Traveler",
+    description:
+      "Get in touch with The Velvet Traveler. Contact our travel experts for personalized trip planning and exclusive deals.",
+    images: ["/assets/locations-hotelImg/locationheader1.svg"],
+  },
+  twitter: {
+    title: "Contact The Velvet Traveler",
+    description:
+      "Get in touch with The Velvet Traveler. Contact our travel experts for personalized trip planning and exclusive deals.",
+  },
+};
 
 export default function ContactPage() {
   return (
