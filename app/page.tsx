@@ -10,11 +10,13 @@ import ScrollToTop from "@/components/ScrollToTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
+  title:
+    "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
   description:
     "Travel That Feels Like a Dream, Not a Bill. The Velvet Traveler curates premium trips that match your taste and budget. Explore luxury travel destinations, exclusive hotel deals, and unforgettable cruise packages.",
   openGraph: {
-    title: "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
+    title:
+      "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
     description:
       "Travel That Feels Like a Dream, Not a Bill. The Velvet Traveler curates premium trips that match your taste and budget.",
     images: [
@@ -27,7 +29,8 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
+    title:
+      "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
     description:
       "Travel That Feels Like a Dream, Not a Bill. The Velvet Traveler curates premium trips that match your taste and budget.",
     images: ["https://velvettraveler.com/assets/heroimg.png"],
