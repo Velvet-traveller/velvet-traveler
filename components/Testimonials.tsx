@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import testimonialsData from "@/data/testimonials.json";
@@ -9,6 +9,17 @@ export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const testimonials = testimonialsData;
   const hasTestimonials = testimonials.length > 0;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const nextTestimonial = () => {
     if (!hasTestimonials) return;
@@ -24,12 +35,12 @@ export default function Testimonials() {
 
   const visibleTestimonials = useMemo(() => {
     if (!hasTestimonials) return [];
-    const displayCount = Math.min(2, testimonials.length);
+    const displayCount = isMobile ? 1 : Math.min(2, testimonials.length);
     return Array.from({ length: displayCount }, (_, offset) => {
       const index = (currentIndex + offset) % testimonials.length;
       return testimonials[index];
     });
-  }, [currentIndex, testimonials, hasTestimonials]);
+  }, [currentIndex, testimonials, hasTestimonials, isMobile]);
 
   return (
     <section className="py-16 lg:py-24 bg-[#f9f3eb]">
@@ -45,7 +56,7 @@ export default function Testimonials() {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_auto_1.1fr] items-center gap-8 lg:gap-10 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_auto_1.1fr] items-center gap-8 lg:gap-10 relative z-10 p-4 sm:p-6 lg:p-0">
               <div className="flex flex-col items-center lg:items-start text-white/85 gap-3">
                 <Image
                   src="/assets/vlogogold.svg"
@@ -94,7 +105,7 @@ export default function Testimonials() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_2.15fr] gap-10 items-center">
-          <div className="bg-[#ece4ff] rounded-[20px] border border-[#dccffb] p-6 sm:p-8 shadow-[0_25px_60px_rgba(15,23,42,0.08)] h-full w-full max-w-[360px] lg:max-w-[400px] mx-auto">
+          <div className="hidden lg:block bg-[#ece4ff] rounded-[20px] border border-[#dccffb] p-6 sm:p-8 shadow-[0_25px_60px_rgba(15,23,42,0.08)] h-full w-full max-w-[360px] lg:max-w-[400px] mx-auto">
             <div className="flex items-center justify-between text-[#c8a130] mb-5 text-2xl">
               <span aria-hidden>☺</span>
               <span aria-hidden>✓</span>

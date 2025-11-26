@@ -13,11 +13,11 @@ export default function PopularPlaces() {
     <section className="pt-4 md:pt-4 lg:pt-4 pb-12 md:pb-8 lg:pb-10 bg-[#f9f3eb]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="text-center mb-10 md:mb-14 lg:mb-16 max-w-3xl mx-auto">
-          <div className="text-velvet-gold text-xs sm:text-sm md:text-base uppercase tracking-wider mb-2 font-sans">
+          <div className="text-velvet-gold text-sm sm:text-base md:text-lg uppercase tracking-wider mb-3 font-sans">
             POPULAR PLACES
           </div>
-          <h1 className="text-sm sm:text-base md:text-lg lg:text-3xl text-gray-600 max-w-3xl lg:max-w-md font-sans text-center mx-auto">
-            Our Most-Loved Getaways{" "}
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-900 max-w-3xl lg:max-w-md font-serif text-center mx-auto">
+            Our Most-Loved Getaways
           </h1>
         </div>
 

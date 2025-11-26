@@ -14,10 +14,10 @@ export default function TopDestinations() {
     <section className="py-12 md:py-16 lg:py-24 bg-[#f9f3eb]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-6 md:mb-8 lg:mb-12 text-center">
-          <div className="text-velvet-gold text-xs sm:text-sm md:text-base uppercase tracking-wider mb-2 font-sans">
+          <div className="text-velvet-gold text-sm sm:text-base md:text-lg uppercase tracking-wider mb-3 font-sans">
             VELVET TRAVELER
           </div>
-          <h1 className="text-sm sm:text-base md:text-lg lg:text-3xl text-gray-600 max-w-3xl lg:max-w-md font-sans text-center mx-auto">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-900 max-w-2xl lg:max-w-md font-serif text-center mx-auto">
             The Velvet Traveler: Luxury You Can Actually Afford
           </h1>
         </div>
