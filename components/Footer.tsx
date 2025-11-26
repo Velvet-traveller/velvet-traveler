@@ -10,15 +10,15 @@ export default function Footer() {
           <div className="mb-6 md:mb-8 flex justify-center">
             <Logo variant="dark" />
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4 md:mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 md:mb-6">
             The Velvet Traveler
           </h2>
-          <p className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-white mb-6 md:mb-8 max-w-2xl mx-auto">
             Luxury Travel. Smart Choices. Beautiful Experiences.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#8B6914] hover:bg-[#A67C1A] text-white px-6 py-3 md:px-8 md:py-2 rounded-2xl text-base md:text-lg font-semibold transition-colors duration-300"
+            className="inline-block bg-[#8B6914] hover:bg-[#A67C1A] text-white px-6 py-2 md:px-8 md:py-2 rounded-lg text-base md:text-lg font-semibold transition-colors duration-300"
           >
             Contact Us
           </Link>
@@ -27,7 +27,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 py-6 md:py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
-            {/* Email */}
+            {/* Email - Left */}
             <div className="flex items-center text-velvet-gold order-2 md:order-1">
               <img
                 src="/assets/gmail.svg"
@@ -42,20 +42,17 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* Copyright */}
-            <div className="text-sm sm:text-base text-gray-400 order-3 md:order-2 text-center">
-              © 2025 The Velvet Traveler. All Rights Reserved.
-            </div>
-
-            {/* Social Media Icons */}
-            <div className="flex space-x-3 sm:space-x-4 order-1 md:order-3">
+            {/* Social Media Icons - Center */}
+            <div className="flex space-x-3 sm:space-x-4 order-1 md:order-2">
               <a
-                href="#"
-                className="bg-[#8B6914] hover:bg-[#A67C1A] transition w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-velvet-gold hover:text-white transition w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
                 aria-label="Instagram"
               >
                 <svg
-                  className="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                  className="w-5 h-5 sm:w-6 sm:h-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -63,18 +60,25 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
-                className="bg-[#8B6914] hover:bg-[#A67C1A] transition w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center"
+                href="https://tiktok.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-velvet-gold hover:text-white transition w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
                 aria-label="TikTok"
               >
                 <svg
-                  className="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                  className="w-5 h-5 sm:w-6 sm:h-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                 </svg>
               </a>
+            </div>
+
+            {/* Copyright - Right */}
+            <div className="text-sm sm:text-base text-velvet-gold order-3 md:order-3 text-center md:text-right">
+              © 2025 The Velvet Traveler. All Rights Reserved.
             </div>
           </div>
         </div>

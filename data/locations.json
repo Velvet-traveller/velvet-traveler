@@ -10,8 +10,8 @@
   },
   {
     "id": 2,
-    "name": "Rio de Janeiro, Brazil",
-    "description": "Discover the vibrant culture, stunning beaches, and breathtaking views of this iconic Brazilian city.",
+    "name": "Maldives",
+    "description": "Overwater bliss & once-in-life-time moments.",
     "image": "/assets/heroimg.jpg",
     "price": "$1,299",
     "duration": "7 days",
@@ -19,8 +19,8 @@
   },
   {
     "id": 3,
-    "name": "Ottawa, Canada",
-    "description": "Explore the capital city with its historic parliament buildings and beautiful river views.",
+    "name": "Mexico",
+    "description": "Vibrant culture, sun-soaked beaches, & colorful escapes.",
     "image": "/assets/89db6b323a21742d0980117adfc2359e5747d732.jpg",
     "price": "$749",
     "duration": "4 days",
@@ -64,8 +64,8 @@
   },
   {
     "id": 8,
-    "name": "Fountain City",
-    "description": "Beautiful cityscape with stunning fountains and modern architecture.",
+    "name": "Dubai",
+    "description": "Five-star luxury desert magic & rooftop elegance.",
     "image": "/assets/6e98aeb31beefe487b716e92c4d14ac4e17bf770.jpg",
     "price": "$649",
     "duration": "4 days",

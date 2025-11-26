@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import testimonialsData from "@/data/testimonials.json";
 
 export default function Testimonials() {
@@ -54,9 +55,6 @@ export default function Testimonials() {
                   className="object-contain"
                   priority
                 />
-                <p className="text-xs sm:text-sm tracking-[0.35em] uppercase font-semibold">
-                  The Velvet Traveler
-                </p>
               </div>
               <div className="relative w-full h-60 sm:h-64 lg:h-[360px] flex items-end justify-center">
                 <div className="relative w-full max-w-[210px] sm:max-w-[250px] lg:max-w-[320px] h-72 sm:h-80 lg:h-[460px]">
@@ -69,17 +67,18 @@ export default function Testimonials() {
                 </div>
               </div>
               <div className="text-center lg:text-left">
-                <p className="uppercase text-xs sm:text-sm tracking-[0.6em] text-white/70 mb-3 font-semibold">
-                  Explore the world smarter
-                </p>
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif mb-3">
                   Explore the World Smarter
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg text-white/90 font-sans leading-relaxed max-w-xl">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour.
+                  Let’s Make Your Dream Trip Happen.
                 </p>
+                <Link
+                  href="/locations#weeks"
+                  className="inline-block bg-white text-velvet-gold px-6 py-3 md:px-8 md:py-2 mt-4 rounded-lg text-sm sm:text-base md:text-lg font-semibold transition-colors duration-300 animate-breathe hover:bg-gray-50"
+                >
+                  Plan my trip →
+                </Link>
               </div>
             </div>
           </div>
@@ -142,7 +141,7 @@ export default function Testimonials() {
                     <p className="font-semibold text-gray-900">
                       {testimonial.name}
                     </p>
-                    <p className="text-xs text-gray-500">{testimonial.role}</p>
+                    {/* <p className="text-xs text-gray-500">{testimonial.role}</p> */}
                   </div>
                 </div>
               ))}

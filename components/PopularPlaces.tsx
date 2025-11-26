@@ -13,14 +13,12 @@ export default function PopularPlaces() {
     <section className="py-12 md:py-16 lg:py-24 bg-[#f9f3eb]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="text-center mb-10 md:mb-14 lg:mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 mb-4">
-            Popular Places
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 font-sans leading-relaxed">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour.
-          </p>
+          <div className="text-velvet-gold text-xs sm:text-sm md:text-base uppercase tracking-wider mb-2 font-sans">
+            POPULAR PLACES
+          </div>
+          <h1 className="text-sm sm:text-base md:text-lg lg:text-3xl text-gray-600 max-w-3xl lg:max-w-md font-sans text-center mx-auto">
+            Our Most-Loved Getaways{" "}
+          </h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 lg:gap-4 items-center">
@@ -45,9 +43,9 @@ export default function PopularPlaces() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-6 text-white">
-                  <p className="text-xs uppercase tracking-[0.4em] mb-2 font-sans opacity-80">
+                  {/* <p className="text-xs uppercase tracking-[0.4em] mb-2 font-sans opacity-80">
                     Top Destination
-                  </p>
+                  </p> */}
                   <h3 className="text-4xl sm:text-5xl font-semibold mb-3 uppercase tracking-tight font-sans">
                     {location?.name?.split(",")[0] || "Explore"}
                   </h3>

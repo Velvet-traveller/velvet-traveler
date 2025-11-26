@@ -4,6 +4,8 @@ import LocationHeader from "@/components/locations/LocationHeader";
 import ExclusiveOffersBanner from "@/components/ExclusiveOffersBanner";
 import LocationTabs from "@/components/locations/LocationTabs";
 import Newsletter from "@/components/Newsletter";
+import ScrollIndicator from "@/components/ScrollIndicator";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function LocationsPage() {
   return (
@@ -14,6 +16,8 @@ export default function LocationsPage() {
       <LocationTabs />
       <Newsletter />
       <Footer />
+      <ScrollIndicator />
+      <ScrollToTop />
     </main>
   );
 }

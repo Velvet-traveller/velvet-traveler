@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import locationsData from "@/data/locations.json";
 
 export default function TopDestinations() {
@@ -14,18 +13,13 @@ export default function TopDestinations() {
   return (
     <section className="py-12 md:py-16 lg:py-24 bg-[#f9f3eb]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-6 md:mb-8 lg:mb-12">
+        <div className="mb-6 md:mb-8 lg:mb-12 text-center">
           <div className="text-velvet-gold text-xs sm:text-sm md:text-base uppercase tracking-wider mb-2 font-sans">
             VELVET TRAVELER
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 mb-3 md:mb-4">
-            Top Destination
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl font-sans">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour.
-          </p>
+          <h1 className="text-sm sm:text-base md:text-lg lg:text-3xl text-gray-600 max-w-3xl lg:max-w-md font-sans text-center mx-auto">
+            The Velvet Traveler: Luxury You Can Actually Afford
+          </h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr] gap-4 sm:gap-6 md:gap-8 mb-6 md:mb-8 items-stretch md:min-h-[520px] lg:min-h-[620px]">
@@ -43,9 +37,10 @@ export default function TopDestinations() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
                   <p className="text-xs sm:text-sm md:text-base opacity-90 font-sans">
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form, by injected humour.
+                    At The Velvet Traveler, we handpick destinations that make
+                    you feel like a VIP, without your wallet crying. Think
+                    iconic skylines, secret hideaways, and moments that scream
+                    “how did I get so lucky?”.
                   </p>
                 </div>
               </div>
@@ -64,9 +59,7 @@ export default function TopDestinations() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
                   <p className="text-xs sm:text-sm md:text-base opacity-90 font-sans">
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form, by injected humour.
+                    Your ticket to the velvet life? Yeah, we’ve got that.
                   </p>
                 </div>
               </div>
@@ -86,22 +79,13 @@ export default function TopDestinations() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
                 <p className="text-xs sm:text-sm md:text-base opacity-90 font-sans">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour.
+                  Luxury isn’t about flashing cash. It’s about living smarter,
+                  traveling bolder, and experiencing the world in style,
+                  effortlessly, and unapologetically velvet.
                 </p>
               </div>
             </div>
           )}
-        </div>
-
-        <div className="flex justify-center">
-          <Link
-            href="/locations"
-            className="inline-block bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-sm sm:text-base md:text-lg font-semibold transition-colors duration-300 animate-breathe"
-          >
-            Explore Available Bookings →
-          </Link>
         </div>
       </div>
     </section>

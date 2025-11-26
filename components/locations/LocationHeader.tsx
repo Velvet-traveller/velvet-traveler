@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
+import ScrollIndicator from "../ScrollIndicator";
 
 const images = [
   {
@@ -116,6 +117,7 @@ export default function LocationHeader() {
           </div>
         </div>
       </div>
+
     </section>
   );
 }

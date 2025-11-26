@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ScrollIndicator from "./ScrollIndicator";
 
 export default function Hero() {
   return (
@@ -25,7 +26,7 @@ export default function Hero() {
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-white mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
             We curate premium trips that match your taste and budget, because
-            luxury shouldn’t mean breaking the bank.
+            luxury shouldn't mean breaking the bank.
           </p>
           <Link
             href="/locations#weeks"
@@ -35,6 +36,9 @@ export default function Hero() {
           </Link>
         </div>
       </div>
+
+      {/* Scroll Indicator */}
+      <ScrollIndicator variant="dark" />
     </section>
   );
 }

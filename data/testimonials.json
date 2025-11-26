@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Sarah Johnson",
     "role": "@ Tech Corp",
-    "rating": 5,
+    "rating": 4,
     "text": "Amazing service and unbeatable prices! They made our honeymoon absolutely perfect.",
     "image": "/assets/8ce523189d43d8c1235cd9d4f07e09a654f805e9.png"
   },
@@ -19,9 +19,8 @@
     "id": 3,
     "name": "Michael Chen",
     "role": "@ Finance Inc",
-    "rating": 5,
+    "rating": 4.5,
     "text": "Professional, reliable, and always available to help. Highly recommend for any travel needs.",
     "image": "/assets/8ce523189d43d8c1235cd9d4f07e09a654f805e9.png"
   }
 ]
-
