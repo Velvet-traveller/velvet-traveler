@@ -2,15 +2,30 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { sendNewsletterEmail } from "@/utils/email";
+import { toast } from "react-toastify";
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter subscription
-    console.log("Subscribing:", email);
-    setEmail("");
+    setIsSubmitting(true);
+
+    try {
+      await sendNewsletterEmail(email);
+      toast.success("Successfully subscribed to our newsletter!");
+      setEmail("");
+    } catch (error) {
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : "Failed to subscribe. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -49,9 +64,10 @@ export default function Newsletter() {
               />
               <button
                 type="submit"
-                className="bg-[#8B6914] hover:bg-[#A67C1A] text-white px-6 py-3 rounded-lg text-sm font-semibold transition-colors duration-300 whitespace-nowrap"
+                disabled={isSubmitting}
+                className="bg-[#8B6914] hover:bg-[#A67C1A] text-white px-6 py-3 rounded-lg text-sm font-semibold transition-colors duration-300 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Subscribe
+                {isSubmitting ? "Subscribing..." : "Subscribe"}
               </button>
             </form>
           </div>

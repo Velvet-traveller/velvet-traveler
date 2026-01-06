@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { sendBookingEmail } from "@/utils/email";
 
 export interface BookingData {
   // Contact Information
@@ -38,14 +39,15 @@ export const useBookingStore = create<BookingStore>((set) => ({
   addBooking: async (booking: BookingData) => {
     set({ isLoading: true, error: null });
     try {
-      // Simulate API call - you'll replace this with Firebase later
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
       const newBooking = {
         ...booking,
         submittedAt: new Date(),
       };
       
+      // Send email notification
+      await sendBookingEmail(newBooking);
+      
+      // Store booking in state
       set((state) => ({
         bookings: [...state.bookings, newBooking],
         isLoading: false,

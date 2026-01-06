@@ -141,7 +141,7 @@ export default function Testimonials() {
                     </div>
                   </div>
                   <div className="flex justify-center gap-1 text-[#f4b400] text-lg mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(Math.floor(testimonial.rating))].map((_, i) => (
                       <span key={i}>★</span>
                     ))}
                   </div>
