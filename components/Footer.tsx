@@ -35,10 +35,10 @@ export default function Footer() {
                 className="w-5 h-5 mr-2 flex-shrink-0"
               />
               <a
-                href="mailto:booking@velvettraveler.com"
+                href="mailto:bookings@velvettraveler.com"
                 className="hover:text-white transition text-sm sm:text-base break-all"
               >
-                booking@velvettraveler.com
+                bookings@velvettraveler.com
               </a>
             </div>
 

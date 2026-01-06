@@ -289,7 +289,7 @@ Copy and paste this template into EmailJS:
       >
         The Velvet Traveler
       </div>
-      <div style="font-size: 11px; color: #999">booking@velvettraveler.com</div>
+      <div style="font-size: 11px; color: #999">bookings@velvettraveler.com</div>
     </div>
   </div>
 </div>
@@ -514,7 +514,7 @@ The email will be professionally formatted with:
       >
         The Velvet Traveler
       </div>
-      <div style="font-size: 11px; color: #999">booking@velvettraveler.com</div>
+      <div style="font-size: 11px; color: #999">bookings@velvettraveler.com</div>
     </div>
   </div>
 </div>
@@ -538,7 +538,7 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key_here
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id_here
 NEXT_PUBLIC_EMAILJS_BOOKING_TEMPLATE_ID=your_booking_template_id_here
 NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID=your_newsletter_template_id_here
-NEXT_PUBLIC_BOOKING_EMAIL=booking@velvettraveler.com
+NEXT_PUBLIC_BOOKING_EMAIL=bookings@velvettraveler.com
 ```
 
 3. Replace the placeholder values with your actual EmailJS credentials

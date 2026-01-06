@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with The Velvet Traveler. Contact our travel experts for personalized trip planning, exclusive deals, and assistance with your bookings. Email us at booking@velvettraveler.com",
+    "Get in touch with The Velvet Traveler. Contact our travel experts for personalized trip planning, exclusive deals, and assistance with your bookings. Email us at bookings@velvettraveler.com",
   openGraph: {
     title: "Contact The Velvet Traveler",
     description:
@@ -98,10 +98,10 @@ export default function ContactPage() {
                         Email Us
                       </h3>
                       <a
-                        href="mailto:booking@velvettraveler.com"
+                        href="mailto:bookings@velvettraveler.com"
                         className="text-[#8B6914] hover:text-[#A67C1A] text-lg font-semibold transition-colors"
                       >
-                        booking@velvettraveler.com
+                        bookings@velvettraveler.com
                       </a>
                       <p className="text-sm text-gray-600 mt-2">
                         We typically respond within 24 hours
@@ -230,7 +230,7 @@ export default function ContactPage() {
               View Offers
             </a>
             <a
-              href="mailto:booking@velvettraveler.com"
+              href="mailto:bookings@velvettraveler.com"
               className="inline-block border-2 border-[#8B6914] text-[#8B6914] hover:bg-[#8B6914] hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300"
             >
               Send Email

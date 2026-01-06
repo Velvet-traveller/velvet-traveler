@@ -35,19 +35,19 @@ export const sendBookingEmail = async (bookingData: BookingData): Promise<void> 
 
   // Format the booking data for the email template
   const templateParams = {
-    to_email: process.env.NEXT_PUBLIC_BOOKING_EMAIL || 'booking@velvettraveler.com',
+    to_email: process.env.NEXT_PUBLIC_BOOKING_EMAIL || 'bookings@velvettraveler.com',
     subject: `🎯 New Booking Request - ${bookingData.destination} (${bookingData.tripType})`,
     from_name: `${bookingData.firstName} ${bookingData.lastName}`,
     from_email: bookingData.email,
     phone: bookingData.phone,
     trip_type: bookingData.tripType,
     destination: bookingData.destination,
-    region: bookingData.region || 'N/A',
-    price: bookingData.price || 'N/A',
+    region: bookingData.region || 'Not specified',
+    price: bookingData.price || 'Not available',
     travel_date: bookingData.travelDate || 'Not specified',
     number_of_guests: bookingData.numberOfGuests?.toString() || 'Not specified',
     special_requests: bookingData.specialRequests || 'None',
-    description: bookingData.description || 'N/A',
+    description: bookingData.description || 'Not available',
     submitted_at: bookingData.submittedAt 
       ? new Date(bookingData.submittedAt).toLocaleString() 
       : new Date().toLocaleString(),
@@ -113,7 +113,9 @@ export const sendNewsletterEmail = async (email: string): Promise<void> => {
   initEmailJS();
 
   const templateParams = {
-    to_email: process.env.NEXT_PUBLIC_BOOKING_EMAIL || 'booking@velvettraveler.com',
+    // Note: to_email must be set in EmailJS template settings, not here
+    // Set "To Email" field in template to: bookings@velvettraveler.com
+    reply_to: email, // Reply-to address (subscriber's email)
     subject: `📧 New Newsletter Subscription - The Velvet Traveler`,
     subscriber_email: email,
     subscribed_at: new Date().toLocaleString(),
