@@ -50,7 +50,7 @@ export default function BookNowFormModal({
         numberOfGuests: formData.numberOfGuests
           ? parseInt(formData.numberOfGuests)
           : undefined,
-        tripType: "hotel",
+        tripType: "book_a_trip",
         destination,
         region,
         price,
@@ -221,7 +221,7 @@ export default function BookNowFormModal({
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Special Requests
+                  Kindly write more details or preference of your trip
                 </label>
                 <textarea
                   value={formData.specialRequests}
@@ -233,7 +233,7 @@ export default function BookNowFormModal({
                   }
                   rows={4}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B6914]"
-                  placeholder="Any special requests or preferences for your stay..."
+                  placeholder="Kindly write more details, special requirements or preference of your trip..."
                 />
               </div>
 
