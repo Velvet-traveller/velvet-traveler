@@ -43,7 +43,7 @@ export default function ContactFormModal({
     try {
       await addBooking({
         ...formData,
-        tripType: "seascape",
+        tripType: "book_a_trip",
         destination,
         description,
       });
@@ -154,14 +154,14 @@ export default function ContactFormModal({
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Special Requests or Questions
+                  Kindly write more details or preference of your trip
                 </label>
                 <textarea
                   value={formData.specialRequests}
                   onChange={(e) => setFormData({ ...formData, specialRequests: e.target.value })}
                   rows={4}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B6914]"
-                  placeholder="Tell us about any special requirements or questions..."
+                  placeholder="Kindly write more details, special requirements or preference of your trip..."
                 />
               </div>
 

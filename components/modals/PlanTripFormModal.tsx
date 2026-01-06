@@ -46,7 +46,7 @@ export default function PlanTripFormModal({
       await addBooking({
         ...formData,
         numberOfGuests: formData.numberOfGuests ? parseInt(formData.numberOfGuests) : undefined,
-        tripType: "week",
+        tripType: "plan_my_trip",
         destination,
         region,
       });
@@ -184,14 +184,14 @@ export default function PlanTripFormModal({
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Special Requests or Preferences
+                  Kindly write more details or preference of your trip
                 </label>
                 <textarea
                   value={formData.specialRequests}
                   onChange={(e) => setFormData({ ...formData, specialRequests: e.target.value })}
                   rows={4}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B6914]"
-                  placeholder="Tell us about your travel preferences, budget, or any special requirements..."
+                  placeholder="Kindly write more details, special requirements or preference of your trip..."
                 />
               </div>
 

@@ -9,7 +9,7 @@ export interface BookingData {
   phone: string;
   
   // Trip Details
-  tripType: "hotel" | "week" | "seascape";
+  tripType: "book_a_trip" | "plan_my_trip";
   destination: string;
   region?: string;
   price?: string;

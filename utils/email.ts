@@ -16,6 +16,16 @@ if (typeof window !== 'undefined') {
   initEmailJS();
 }
 
+// Helper function to format trip type for display
+const formatTripType = (tripType: string): string => {
+  if (tripType === 'plan_my_trip') {
+    return 'Plan My Trip';
+  } else if (tripType === 'book_a_trip') {
+    return 'Book A Trip';
+  }
+  return tripType; // Fallback to original if unknown
+};
+
 // Send booking email
 export const sendBookingEmail = async (bookingData: BookingData): Promise<void> => {
   const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
@@ -34,13 +44,15 @@ export const sendBookingEmail = async (bookingData: BookingData): Promise<void> 
   initEmailJS();
 
   // Format the booking data for the email template
+  const formattedTripType = formatTripType(bookingData.tripType);
+  
   const templateParams = {
     to_email: process.env.NEXT_PUBLIC_BOOKING_EMAIL || 'bookings@velvettraveler.com',
-    subject: `🎯 New Booking Request - ${bookingData.destination} (${bookingData.tripType})`,
+    subject: `🎯 New Booking Request - ${bookingData.destination} (${formattedTripType})`,
     from_name: `${bookingData.firstName} ${bookingData.lastName}`,
     from_email: bookingData.email,
     phone: bookingData.phone,
-    trip_type: bookingData.tripType,
+    trip_type: formattedTripType, // Use formatted version for display
     destination: bookingData.destination,
     region: bookingData.region || 'Not specified',
     price: bookingData.price || 'Not available',
@@ -61,7 +73,7 @@ Contact Information:
 - Phone: ${bookingData.phone}
 
 Trip Details:
-- Trip Type: ${bookingData.tripType}
+- Trip Type: ${formattedTripType}
 - Destination: ${bookingData.destination}
 - Region: ${bookingData.region || 'N/A'}
 - Price: ${bookingData.price || 'N/A'}
