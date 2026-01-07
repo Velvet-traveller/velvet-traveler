@@ -12,7 +12,8 @@ export interface BookingData {
   tripType: "book_a_trip" | "plan_my_trip";
   destination: string;
   region?: string;
-  price?: string;
+  price?: string; // Price per person
+  totalAmount?: string; // Total amount (price × number of guests)
   description?: string;
   
   // Additional Details

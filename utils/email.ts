@@ -46,6 +46,17 @@ export const sendBookingEmail = async (bookingData: BookingData): Promise<void> 
   // Format the booking data for the email template
   const formattedTripType = formatTripType(bookingData.tripType);
   
+  // Parse guest information from description
+  let guestsSection = '';
+  if (bookingData.description && bookingData.description.includes('All Guests Information')) {
+    guestsSection = bookingData.description.replace('All Guests Information:', '').trim();
+  }
+  
+  // Calculate total amount for display
+  const calculatedTotal = bookingData.totalAmount || (bookingData.price && bookingData.numberOfGuests 
+    ? `$${(parseFloat(bookingData.price.replace(/[^0-9.]/g, '')) * (bookingData.numberOfGuests || 1)).toFixed(0)}`
+    : 'Not available');
+  
   const templateParams = {
     to_email: process.env.NEXT_PUBLIC_BOOKING_EMAIL || 'bookings@velvettraveler.com',
     subject: `🎯 New Booking Request - ${bookingData.destination} (${formattedTripType})`,
@@ -55,7 +66,8 @@ export const sendBookingEmail = async (bookingData: BookingData): Promise<void> 
     trip_type: formattedTripType, // Use formatted version for display
     destination: bookingData.destination,
     region: bookingData.region || 'Not specified',
-    price: bookingData.price || 'Not available',
+    price_per_person: bookingData.price || 'Not available', // Price per person
+    total_amount: calculatedTotal, // Total amount
     travel_date: bookingData.travelDate || 'Not specified',
     number_of_guests: bookingData.numberOfGuests?.toString() || 'Not specified',
     special_requests: bookingData.specialRequests || 'None',
@@ -65,29 +77,41 @@ export const sendBookingEmail = async (bookingData: BookingData): Promise<void> 
       : new Date().toLocaleString(),
     // Full details for email body
     message: `
-New Booking Request Received
+🎯 NEW BOOKING REQUEST RECEIVED
 
-Contact Information:
-- Name: ${bookingData.firstName} ${bookingData.lastName}
-- Email: ${bookingData.email}
-- Phone: ${bookingData.phone}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📞 CONTACT PERSON (Primary Guest)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+👤 Name: ${bookingData.firstName} ${bookingData.lastName}
+📧 Email: ${bookingData.email}
+📱 Phone: ${bookingData.phone}
 
-Trip Details:
-- Trip Type: ${formattedTripType}
-- Destination: ${bookingData.destination}
-- Region: ${bookingData.region || 'N/A'}
-- Price: ${bookingData.price || 'N/A'}
-- Travel Date: ${bookingData.travelDate || 'Not specified'}
-- Number of Guests: ${bookingData.numberOfGuests || 'Not specified'}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✈️ TRIP DETAILS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 Trip Type: ${formattedTripType}
+🌍 Destination: ${bookingData.destination}
+🗺️  Region: ${bookingData.region || 'N/A'}
+💰 Price per Person: ${bookingData.price || 'N/A'}
+👥 Number of Guests: ${bookingData.numberOfGuests || 'Not specified'}
+💵 TOTAL AMOUNT: ${calculatedTotal}
+📅 Travel Date: ${bookingData.travelDate || 'Not specified'}
 
-Special Requests:
+${guestsSection ? `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+👥 ALL GUESTS INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${guestsSection}` : ''}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 SPECIAL REQUESTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ${bookingData.specialRequests || 'None'}
 
-${bookingData.description ? `Description: ${bookingData.description}` : ''}
-
-Submitted at: ${bookingData.submittedAt 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⏰ Submitted at: ${bookingData.submittedAt 
   ? new Date(bookingData.submittedAt).toLocaleString() 
   : new Date().toLocaleString()}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     `.trim(),
   };
 

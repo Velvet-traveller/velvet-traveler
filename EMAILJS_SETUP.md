@@ -29,10 +29,11 @@ This guide will help you set up EmailJS to receive booking form submissions via 
 - `{{from_name}}` - Customer's full name
 - `{{from_email}}` - Customer's email
 - `{{phone}}` - Customer's phone number
-- `{{trip_type}}` - Type of trip (hotel/week/seascape)
+- `{{trip_type}}` - Type of trip (Book A Trip / Plan My Trip)
 - `{{destination}}` - Destination name
 - `{{region}}` - Region
-- `{{price}}` - Price
+- `{{price_per_person}}` - Price per person
+- `{{total_amount}}` - Total amount (price per person × number of guests)
 - `{{travel_date}}` - Travel date
 - `{{number_of_guests}}` - Number of guests
 - `{{special_requests}}` - Special requests
@@ -113,6 +114,10 @@ Copy and paste this template into EmailJS:
               style="color: #2c3e50; font-size: 18px; font-weight: bold; margin-bottom: 5px"
             >
               {{from_name}}
+              <span
+                style="font-size: 12px; color: #8B6914; font-weight: normal; margin-left: 8px; background-color: #f9f3eb; padding: 2px 8px; border-radius: 3px"
+                >👤 Contact Person</span
+              >
             </div>
             <div style="color: #8B6914; font-size: 14px; margin-bottom: 8px">
               📧
@@ -174,22 +179,33 @@ Copy and paste this template into EmailJS:
               <strong style="color: #555">Region:</strong> {{region}}
             </div>
             <div style="font-size: 14px; margin-bottom: 6px">
-              <strong style="color: #555">Price:</strong>
-              <span style="color: #8B6914; font-weight: bold">{{price}}</span>
-            </div>
-            <div style="font-size: 14px; margin-bottom: 6px">
-              <strong style="color: #555">Travel Date:</strong> {{travel_date}}
+              <strong style="color: #555">Price per Person:</strong>
+              <span style="color: #8B6914; font-weight: bold"
+                >{{price_per_person}}</span
+              >
             </div>
             <div style="font-size: 14px; margin-bottom: 6px">
               <strong style="color: #555">Number of Guests:</strong>
               {{number_of_guests}}
+            </div>
+            <div style="font-size: 14px; margin-bottom: 6px">
+              <strong style="color: #555">Total Amount:</strong>
+              <span style="color: #8B6914; font-weight: bold; font-size: 18px"
+                >{{total_amount}}</span
+              >
+              <span style="font-size: 12px; color: #999; margin-left: 5px">
+                ({{number_of_guests}} guests × {{price_per_person}})
+              </span>
+            </div>
+            <div style="font-size: 14px; margin-bottom: 6px">
+              <strong style="color: #555">Travel Date:</strong> {{travel_date}}
             </div>
           </td>
         </tr>
       </table>
     </div>
 
-    <!-- Description Section -->
+    <!-- All Guests Information Section -->
     <div
       style="margin-top: 25px; padding: 20px 0; border-width: 1px 0; border-style: dashed; border-color: lightgrey"
     >
@@ -200,20 +216,15 @@ Copy and paste this template into EmailJS:
               style="padding: 8px 12px; margin: 0 10px; background-color: #f9f3eb; border-radius: 5px; font-size: 28px; width: 50px; text-align: center"
               role="img"
             >
-              📝
+              👥
             </div>
           </td>
           <td style="vertical-align: top">
             <div
-              style="color: #2c3e50; font-size: 16px; font-weight: bold; margin-bottom: 8px"
-            >
-              Description
-            </div>
-            <p
-              style="font-size: 14px; color: #2c3e50; margin: 0; line-height: 1.6"
+              style="font-size: 14px; color: #2c3e50; margin: 0; line-height: 1.8; white-space: pre-line"
             >
               {{description}}
-            </p>
+            </div>
           </td>
         </tr>
       </table>
@@ -289,7 +300,9 @@ Copy and paste this template into EmailJS:
       >
         The Velvet Traveler
       </div>
-      <div style="font-size: 11px; color: #999">bookings@velvettraveler.com</div>
+      <div style="font-size: 11px; color: #999">
+        bookings@velvettraveler.com
+      </div>
     </div>
   </div>
 </div>
@@ -313,9 +326,10 @@ Phone:    {{phone}}
 Trip Type:        {{trip_type}}
 Destination:       {{destination}}
 Region:            {{region}}
-Price:             {{price}}
-Travel Date:       {{travel_date}}
+Price per Person:  {{price_per_person}}
 Number of Guests:  {{number_of_guests}}
+Total Amount:      {{total_amount}}
+Travel Date:       {{travel_date}}
 
 📝 DESCRIPTION
 ───────────────────────────────────────────────────────────
@@ -514,7 +528,9 @@ The email will be professionally formatted with:
       >
         The Velvet Traveler
       </div>
-      <div style="font-size: 11px; color: #999">bookings@velvettraveler.com</div>
+      <div style="font-size: 11px; color: #999">
+        bookings@velvettraveler.com
+      </div>
     </div>
   </div>
 </div>
