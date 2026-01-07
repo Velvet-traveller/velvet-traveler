@@ -105,9 +105,6 @@ export default function ContactPage() {
                       >
                         bookings@velvettraveler.com
                       </a>
-                      <p className="text-sm text-gray-600 mt-2">
-                        We typically respond within 24 hours
-                      </p>
                     </div>
                   </div>
                 </div>
