@@ -15,10 +15,12 @@ export const metadata: Metadata = {
       "Learn about The Velvet Traveler - your trusted partner in creating unforgettable travel experiences without breaking the bank.",
     images: ["/assets/heroimg.png"],
   },
-  twitter: {
-    title: "About The Velvet Traveler",
-    description:
+  other: {
+    "instagram:title": "About The Velvet Traveler",
+    "instagram:description":
       "Learn about The Velvet Traveler - your trusted partner in creating unforgettable travel experiences without breaking the bank.",
+    "instagram:url":
+      "https://www.instagram.com/the.velvettraveler?igsh=bm04aTR4Yzhna3Bt&utm_source=qr",
   },
 };
 

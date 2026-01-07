@@ -15,10 +15,11 @@ export const metadata: Metadata = {
       "Get in touch with The Velvet Traveler. Contact our travel experts for personalized trip planning and exclusive deals.",
     images: ["/assets/locations-hotelImg/locationheader1.svg"],
   },
-  twitter: {
-    title: "Contact The Velvet Traveler",
-    description:
+  other: {
+    "instagram:title": "Contact The Velvet Traveler",
+    "instagram:description":
       "Get in touch with The Velvet Traveler. Contact our travel experts for personalized trip planning and exclusive deals.",
+    "instagram:url": "https://www.instagram.com/the.velvettraveler?igsh=bm04aTR4Yzhna3Bt&utm_source=qr",
   },
 };
 

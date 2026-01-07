@@ -28,12 +28,13 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    title:
+  other: {
+    "instagram:title":
       "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
-    description:
+    "instagram:description":
       "Travel That Feels Like a Dream, Not a Bill. The Velvet Traveler curates premium trips that match your taste and budget.",
-    images: ["https://velvettraveler.com/assets/heroimg.png"],
+    "instagram:url":
+      "https://www.instagram.com/the.velvettraveler?igsh=bm04aTR4Yzhna3Bt&utm_source=qr",
   },
 };
 

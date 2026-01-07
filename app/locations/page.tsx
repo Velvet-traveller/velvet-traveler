@@ -18,10 +18,11 @@ export const metadata: Metadata = {
       "Explore our exclusive travel destinations. Browse luxury hotels, cruise packages, and vacation deals.",
     images: ["/assets/locations-hotelImg/locationheader1.svg"],
   },
-  twitter: {
-    title: "Locations & Destinations - The Velvet Traveler",
-    description:
+  other: {
+    "instagram:title": "Locations & Destinations - The Velvet Traveler",
+    "instagram:description":
       "Explore our exclusive travel destinations. Browse luxury hotels, cruise packages, and vacation deals.",
+    "instagram:url": "https://www.instagram.com/the.velvettraveler?igsh=bm04aTR4Yzhna3Bt&utm_source=qr",
   },
 };
 

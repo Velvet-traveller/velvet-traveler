@@ -58,18 +58,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title:
-      "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
-    description:
-      "Luxury travel that doesn't break the bank. Premium trips, exclusive deals, and unforgettable experiences.",
-    images: [
-      "https://velvettraveler.com/assets/heroimg.png",
-      "https://velvettraveler.com/assets/vlogogold.svg",
-    ],
-    creator: "@velvettraveler", // Update with your Twitter handle if available
-  },
   robots: {
     index: true,
     follow: true,
@@ -95,6 +83,12 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
     "apple-mobile-web-app-title": "Velvet Traveler",
+    "instagram:title":
+      "The Velvet Traveler - Luxury Travel. Smart Choices. Beautiful Experiences.",
+    "instagram:description":
+      "Luxury travel that doesn't break the bank. Premium trips, exclusive deals, and unforgettable experiences.",
+    "instagram:url":
+      "https://www.instagram.com/the.velvettraveler?igsh=bm04aTR4Yzhna3Bt&utm_source=qr",
   },
 };
 
