@@ -7,7 +7,7 @@ import ProcessingModal from "./ProcessingModal";
 import SuccessModal from "./SuccessModal";
 import ErrorModal from "./ErrorModal";
 import GuestInputCard from "@/components/shared/GuestInputCard";
-import { useGuestManagement } from "@/components/shared/useGuestManagement";
+import { useGuestManagement } from "@/components/shared/hooks/useGuestManagement";
 
 interface BookNowFormModalProps {
   isOpen: boolean;
@@ -33,8 +33,6 @@ export default function BookNowFormModal({
     handleAddGuestToCount,
     handleUpdateGuest,
     handleRemoveGuest,
-    handleToggleGuestVisibility,
-    handleToggleGuestEditing,
     handleToggleDetailsExpanded,
     resetGuests,
   } = useGuestManagement({ isOpen });
@@ -200,9 +198,7 @@ export default function BookNowFormModal({
                 {guests.length === 0 && (
                   <div className="mb-4 text-center">
                     <p className="text-base text-gray-700 leading-relaxed">
-                      Fill in guest details and click "Add Guest" to add them.
-                      <br />
-                      The first guest will be the contact person.
+                      Click <strong>"Add a Guest"</strong> to fill in guest details
                     </p>
                   </div>
                 )}
@@ -216,8 +212,6 @@ export default function BookNowFormModal({
                     onUpdateGuest={handleUpdateGuest}
                     onAddGuestToCount={handleAddGuestToCount}
                     onRemoveGuest={handleRemoveGuest}
-                    onToggleGuestEditing={handleToggleGuestEditing}
-                    onToggleGuestVisibility={handleToggleGuestVisibility}
                     onToggleDetailsExpanded={handleToggleDetailsExpanded}
                   />
                 ))}

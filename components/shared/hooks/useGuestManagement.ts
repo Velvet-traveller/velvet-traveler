@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
-import { GuestInfo } from "./GuestInputCard";
+import { GuestInfo } from "../GuestInputCard";
 
 interface UseGuestManagementOptions {
   isOpen: boolean;

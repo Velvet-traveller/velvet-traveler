@@ -24,8 +24,6 @@ interface GuestInputCardProps {
   ) => void;
   onAddGuestToCount: (id: number) => void;
   onRemoveGuest: (id: number) => void;
-  onToggleGuestEditing: (id: number) => void;
-  onToggleGuestVisibility?: (id: number) => void;
   onToggleDetailsExpanded: (id: number) => void;
 }
 
@@ -35,8 +33,6 @@ export default function GuestInputCard({
   onUpdateGuest,
   onAddGuestToCount,
   onRemoveGuest,
-  onToggleGuestEditing,
-  onToggleGuestVisibility,
   onToggleDetailsExpanded,
 }: GuestInputCardProps) {
   return (
@@ -63,25 +59,6 @@ export default function GuestInputCard({
           )}
         </div>
         <div className="flex gap-2">
-          {guest.isAdded && (
-            <button
-              type="button"
-              onClick={() => onToggleGuestEditing(guest.id)}
-              className="text-sm text-[#8B6914] hover:text-[#A67C1A] font-medium cursor-pointer"
-            >
-              {guest.isEditing ? "Cancel Edit" : "Edit"}
-            </button>
-          )}
-          {/* Show/Hide button only for guests that are not added yet */}
-          {!guest.isAdded && onToggleGuestVisibility && (
-            <button
-              type="button"
-              onClick={() => onToggleGuestVisibility(guest.id)}
-              className="text-sm text-[#8B6914] hover:text-[#A67C1A] font-medium cursor-pointer"
-            >
-              {guest.isVisible ? "Hide" : "Show"}
-            </button>
-          )}
           <button
             type="button"
             onClick={() => onRemoveGuest(guest.id)}
@@ -93,7 +70,7 @@ export default function GuestInputCard({
       </div>
 
       {/* Accordion toggle button for added guests */}
-      {guest.isAdded && !guest.isEditing && (
+      {guest.isAdded && (
         <div className="mt-4">
           <button
             type="button"
@@ -154,8 +131,8 @@ export default function GuestInputCard({
         </div>
       )}
 
-      {/* Show input fields only when NOT added yet OR when editing */}
-      {(!guest.isAdded || guest.isEditing) && (
+      {/* Show input fields only when NOT added yet */}
+      {!guest.isAdded && (
         <div className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -219,47 +196,16 @@ export default function GuestInputCard({
             </div>
           </div>
 
-          {/* Submit Guest Details Button - Only show if not already added */}
-          {!guest.isAdded && (
-            <div className="pt-2">
-              <button
-                type="button"
-                onClick={() => onAddGuestToCount(guest.id)}
-                className="w-full bg-[#8B6914] hover:bg-[#A67C1A] text-white px-4 py-2 rounded-lg font-semibold transition-colors cursor-pointer"
-              >
-                Submit Guest Details
-              </button>
-            </div>
-          )}
-
-          {/* Save Changes Button - Show when editing an added guest */}
-          {guest.isAdded && guest.isEditing && (
-            <div className="pt-2 flex gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  // Save changes and exit edit mode
-                  onUpdateGuest(guest.id, "isEditing", false);
-                  onUpdateGuest(guest.id, "isVisible", false);
-                  toast.success("Guest details updated successfully!");
-                }}
-                className="flex-1 bg-[#8B6914] hover:bg-[#A67C1A] text-white px-4 py-2 rounded-lg font-semibold transition-colors cursor-pointer"
-              >
-                Save Changes
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  // Cancel editing - exit edit mode
-                  onUpdateGuest(guest.id, "isEditing", false);
-                  onUpdateGuest(guest.id, "isVisible", false);
-                }}
-                className="flex-1 border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors cursor-pointer"
-              >
-                Cancel
-              </button>
-            </div>
-          )}
+          {/* Submit Guest Details Button */}
+          <div className="pt-2">
+            <button
+              type="button"
+              onClick={() => onAddGuestToCount(guest.id)}
+              className="w-full bg-[#8B6914] hover:bg-[#A67C1A] text-white px-4 py-2 rounded-lg font-semibold transition-colors cursor-pointer"
+            >
+              Submit Guest Details
+            </button>
+          </div>
         </div>
       )}
     </div>
