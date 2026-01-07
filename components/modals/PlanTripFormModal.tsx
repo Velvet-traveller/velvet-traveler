@@ -73,8 +73,7 @@ export default function PlanTripFormModal({
       const allGuestsInfo = addedGuests
         .map(
           (guest, index) =>
-            `${index === 0 ? "👤 CONTACT PERSON" : `Guest ${index + 1}`}:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            `${index === 0 ? "👤 CONTACT PERSON" : `GUEST ${index + 1}`}:
 👤 Full Name: ${guest.firstName} ${guest.lastName}
 📧 Email: ${guest.email}
 📱 Phone: ${guest.phone}`
@@ -177,7 +176,8 @@ export default function PlanTripFormModal({
                   {guests.length === 0 && (
                     <div className="text-center py-4">
                       <p className="text-base text-gray-700 leading-relaxed">
-                        Click <strong>"Add a Guest"</strong> to fill in guest details
+                        Click <strong>"Add a Guest"</strong> to fill in guest
+                        details
                       </p>
                     </div>
                   )}
