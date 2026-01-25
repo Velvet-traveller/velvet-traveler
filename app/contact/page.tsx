@@ -199,9 +199,7 @@ export default function ContactPage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                24/7 Support
-              </h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Support</h3>
               <p className="text-gray-600">
                 Our team is here to assist you with any questions or concerns
                 about your booking
